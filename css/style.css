@@ -105,3 +105,38 @@ button,a,input{-webkit-tap-highlight-color:transparent}
 .footer{background:#3b2118}
 :focus-visible{outline-color:#e32620}
 @media(max-width:720px){.header{background:#fffdf6f7}.navlinks{background:#fffdf5}.hero{background:linear-gradient(135deg,#fff9e9,#ffedb3)}.floating-order{box-shadow:0 10px 28px #92110e66}}
+
+/* V6 — ajustes finais de responsividade para publicação mobile */
+@media (max-width:720px) {
+  html { scroll-padding-top:76px; }
+  body { padding-bottom:0; }
+  .container { width:calc(100% - 32px); max-width:520px; }
+  .hero-grid { min-height:0; height:auto; display:flex; flex-direction:column; align-items:stretch; }
+  .hero-copy { padding:30px 0 8px; }
+  .hero-copy h1 { font-size:clamp(34px,8.2vw,45px); line-height:1.1; overflow-wrap:normal; }
+  .hero-copy>p { font-size:15px; line-height:1.55; }
+  .hero-actions { margin-top:20px; }
+  .hero-visual { min-height:0; max-height:none; height:auto; aspect-ratio:1.65; margin:12px 0 26px; }
+  .hero-blob { width:56%; max-width:215px; }
+  .hero-pastel { width:65%; max-width:265px; aspect-ratio:1.32; }
+  .section-heading h2,.about h2,.cta h2 { font-size:clamp(30px,8vw,38px); line-height:1.13; letter-spacing:-1px; }
+  .menu-section { padding:42px 0 54px; }
+  .about { padding:55px 0; }
+  .about-grid { gap:44px; }
+  .about-image img { height:auto; aspect-ratio:1.35; object-fit:cover; }
+  .cta { padding:44px 0 50px; }
+  .footer { padding:38px 0 25px; }
+  .footer-main { grid-template-columns:1fr; gap:14px; padding-bottom:28px; }
+  .footer-main>div:first-child { grid-column:auto; }
+  .footer-main h3 { margin:12px 0; }
+  .footer-main>div:not(:first-child) a { margin:10px 0; }
+  .footer-bottom { padding:18px 0 0; line-height:1.5; }
+  /* A chamada para pedidos já aparece nas seções principais; evita sobreposição. */
+  .floating-order { display:none !important; }
+}
+@media (max-width:370px) {
+  .brand { font-size:17px; }
+  .hero-copy h1 { font-size:33px; }
+  .filters { gap:5px; }
+  .filter { font-size:10px; }
+}
